@@ -34,7 +34,7 @@
             this.txtToEmail = new System.Windows.Forms.TextBox();
             this.subject_label = new System.Windows.Forms.Label();
             this.txtSubject = new System.Windows.Forms.TextBox();
-            this.body = new System.Windows.Forms.RichTextBox();
+            this.txtBody = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFromEmail = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.txtHeading.Name = "txtHeading";
             this.txtHeading.Size = new System.Drawing.Size(141, 20);
             this.txtHeading.TabIndex = 1;
+            this.txtHeading.Text = "Alexis Richard";
             // 
             // email_label
             // 
@@ -73,6 +74,7 @@
             this.txtToEmail.Name = "txtToEmail";
             this.txtToEmail.Size = new System.Drawing.Size(141, 20);
             this.txtToEmail.TabIndex = 1;
+            this.txtToEmail.Text = "Please enter your email address";
             // 
             // subject_label
             // 
@@ -90,14 +92,17 @@
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(141, 20);
             this.txtSubject.TabIndex = 1;
+            this.txtSubject.Text = "Test this one.";
             // 
-            // body
+            // txtBody
             // 
-            this.body.Location = new System.Drawing.Point(15, 131);
-            this.body.Name = "body";
-            this.body.Size = new System.Drawing.Size(256, 102);
-            this.body.TabIndex = 2;
-            this.body.Text = "";
+            this.txtBody.Location = new System.Drawing.Point(15, 131);
+            this.txtBody.Name = "txtBody";
+            this.txtBody.Size = new System.Drawing.Size(256, 102);
+            this.txtBody.TabIndex = 2;
+            this.txtBody.Text = "Hello Employer,\n\nYou can type here anything you want because it would be so glad " +
+    "for me to get this one.\nI hope you would like to click the below \"Send Now\" butt" +
+    "on as interview.\n\nBest regards,\nAlex";
             // 
             // label1
             // 
@@ -115,6 +120,7 @@
             this.txtFromEmail.Name = "txtFromEmail";
             this.txtFromEmail.Size = new System.Drawing.Size(141, 20);
             this.txtFromEmail.TabIndex = 1;
+            this.txtFromEmail.Text = "ecmascript.guru@gmail.com";
             // 
             // btnSend
             // 
@@ -124,6 +130,7 @@
             this.btnSend.TabIndex = 3;
             this.btnSend.Text = "Send Now";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // Popup
             // 
@@ -131,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 302);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.body);
+            this.Controls.Add(this.txtBody);
             this.Controls.Add(this.txtFromEmail);
             this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.label1);
@@ -155,7 +162,7 @@
         private System.Windows.Forms.TextBox txtToEmail;
         private System.Windows.Forms.Label subject_label;
         private System.Windows.Forms.TextBox txtSubject;
-        private System.Windows.Forms.RichTextBox body;
+        private System.Windows.Forms.RichTextBox txtBody;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFromEmail;
         private System.Windows.Forms.Button btnSend;
