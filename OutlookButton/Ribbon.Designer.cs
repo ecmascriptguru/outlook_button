@@ -34,42 +34,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tab1 = Factory.CreateRibbonTab();
-            this.group1 = Factory.CreateRibbonGroup();
-            this.tab1.SuspendLayout();
-            this.group1.SuspendLayout();
+            this.alex_tab = this.Factory.CreateRibbonTab();
+            this.Alex = this.Factory.CreateRibbonGroup();
+            this.alex_click = this.Factory.CreateRibbonButton();
+            this.alex_tab.SuspendLayout();
+            this.Alex.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tab1
+            // alex_tab
             // 
-            this.tab1.Name = "tab1";
-            this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-            this.tab1.ControlId.OfficeId = "TabAddIns";
-            this.tab1.Groups.Add(this.group1);
+            this.alex_tab.Groups.Add(this.Alex);
+            this.alex_tab.Label = "Alex Tab";
+            this.alex_tab.Name = "alex_tab";
             // 
-            // group1
+            // Alex
             // 
-            this.group1.Label = "group1";
-            this.group1.Name = "group1";
+            this.Alex.Items.Add(this.alex_click);
+            this.Alex.Label = "Alex";
+            this.Alex.Name = "Alex";
+            // 
+            // alex_click
+            // 
+            this.alex_click.Label = "Click Me";
+            this.alex_click.Name = "alex_click";
             // 
             // Ribbon
             // 
             this.Name = "Ribbon";
-            this.RibbonType = "Microsoft.Outlook.Mail.Read";
-            this.Tabs.Add(this.tab1);
+            this.RibbonType = "Microsoft.Outlook.Explorer";
+            this.Tabs.Add(this.alex_tab);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon_Load);
-            this.tab1.ResumeLayout(false);
-            this.tab1.PerformLayout();
-            this.group1.ResumeLayout(false);
-            this.group1.PerformLayout();
+            this.alex_tab.ResumeLayout(false);
+            this.alex_tab.PerformLayout();
+            this.Alex.ResumeLayout(false);
+            this.Alex.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonTab alex_tab;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup Alex;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton alex_click;
     }
 
     partial class ThisRibbonCollection
