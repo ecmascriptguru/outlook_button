@@ -34,6 +34,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon));
             this.alex_tab = this.Factory.CreateRibbonTab();
             this.Alex = this.Factory.CreateRibbonGroup();
             this.alex_click = this.Factory.CreateRibbonButton();
@@ -55,8 +56,11 @@
             // 
             // alex_click
             // 
+            this.alex_click.Image = ((System.Drawing.Image)(resources.GetObject("alex_click.Image")));
             this.alex_click.Label = "Click Me";
             this.alex_click.Name = "alex_click";
+            this.alex_click.ShowImage = true;
+            this.alex_click.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.alex_click_Click);
             // 
             // Ribbon
             // 
