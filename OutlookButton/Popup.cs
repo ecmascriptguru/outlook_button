@@ -97,7 +97,7 @@ namespace OutlookButton
             }//end of try block
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show("Ocorreu um erro " + ex.Message);
+                MessageBox.Show("An error occurs. " + ex.Message);
             }//end of catch
         }
 
